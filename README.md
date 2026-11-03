@@ -19,3 +19,9 @@ Menu descriptions, prices, and flavor badges are illustrative; confirm them befo
 Responsive menu filtering, keyboard-operable category buttons, reduced-motion handling, native modal with Escape/focus management, sticky mobile action dock with safe-area support, semantic headings, skip link, image sizes, and lazy-loaded map.
 
 Design references: UI/UX Pro Max guidance (spacing, contrast, touch targets) and https://21st.dev composable React/Tailwind card, navigation, and motion patterns. Components are custom implementations, not copied third-party components.
+
+## Heritage redesign
+
+The current design uses parchment (#F6F1E9), aged teak (#2B1E16), terracotta (#A8422B), and brass (#D4A373), with Fraunces display type and Plus Jakarta Sans body text. `app/globals.css` contains the structural rules followed by the heritage theme in explicit cascade order. Inline SVG cloud ornaments are an original interpretation inspired by Mega Mendung, a Cirebon tradition, not a reproduction or claim that all Indonesian motifs are Sundanese. Cultural reference: https://www.indonesia.travel/id/id/travel-ideas/heritage/7-enchanting-stories-behind-indonesia-s-famous-batik.
+
+`heritage-hero.webp` and `heritage-space.webp` are generated illustrative photography, visibly labeled in the page. Guestbook copy is an invitation from the warung, not a customer testimonial. No numerical Google rating or 24-hour claim is published until confirmed. The official WhatsApp number remains required for direct ordering.
