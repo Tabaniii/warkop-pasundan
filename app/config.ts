@@ -340,7 +340,7 @@ export const menu: MenuItem[] = [
     price: 19000,
     formattedPrice: 'Rp 19.000',
     desc: 'Indomie goreng gurih berpadu potongan sosis goreng dan bakso sapi renyah.',
-    image: '/images/menu/indomie-goreng-telor.jpg',
+    image: '/images/menu/indomie-goreng-basis.jpg',
   },
   {
     id: 'indomie-telor-goreng-basis',
@@ -351,7 +351,7 @@ export const menu: MenuItem[] = [
     formattedPrice: 'Rp 19.500',
     desc: 'Paket komplit indomie goreng telur, irisan bakso sapi, dan sosis lezat.',
     badge: 'Komplit Kenyang',
-    image: '/images/menu/indomie-goreng-telor.jpg',
+    image: '/images/menu/indomie-goreng-basis.jpg',
   },
   {
     id: 'indomie-telor-rebus-basis',
@@ -383,7 +383,7 @@ export const menu: MenuItem[] = [
     formattedPrice: 'Rp 20.500',
     desc: 'Indomie goreng dipadu telur mata sapi setengah matang dan gurihnya kornet tumis warkop.',
     badge: 'Legenda',
-    image: '/images/menu/indomie-goreng-telor.jpg',
+    image: '/images/menu/indomie-goreng-basis.jpg',
   },
   {
     id: 'mie-tektek-goreng',
