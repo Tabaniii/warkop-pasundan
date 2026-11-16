@@ -46,20 +46,41 @@ export function Logo() {
   );
 }
 
+const NAV_LINKS = [
+  { href: '/', label: 'Beranda' },
+  { href: '/menu', label: 'Daftar Menu' },
+  { href: '/#fasilitas', label: 'Fasilitas Kami' },
+  { href: '/cabang', label: 'Cabang Kami' },
+  { href: '/#kontak', label: 'Kontak' },
+] as const;
+
 export function HeaderNav() {
   const [mobile, setMobile] = useState(false);
   const pathname = usePathname();
+  const currentPath = pathname || '';
+
+  const isLinkActive = (href: string) => {
+    if (href === '/') return currentPath === '/';
+    if (href === '/cabang') return currentPath.startsWith('/cabang');
+    return currentPath === href;
+  };
 
   return (
     <header>
       <div className="nav wrap">
         <Logo />
         <nav className={mobile ? 'navlinks open' : 'navlinks'} aria-label="Navigasi utama">
-          <Link href="/" onClick={() => setMobile(false)} className={pathname === '/' ? 'active' : ''}>Beranda</Link>
-          <Link href="/menu" onClick={() => setMobile(false)} className={pathname === '/menu' ? 'active' : ''}>Daftar Menu</Link>
-          <Link href="/#fasilitas" onClick={() => setMobile(false)}>Fasilitas Kami</Link>
-          <Link href="/cabang" onClick={() => setMobile(false)} className={pathname.startsWith('/cabang') ? 'active' : ''}>Cabang Kami</Link>
-          <Link href="/#kontak" onClick={() => setMobile(false)}>Kontak</Link>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobile(false)}
+              className={isLinkActive(link.href) ? 'active' : ''}
+              suppressHydrationWarning
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
         <button
           className="mobile-toggle"
@@ -82,7 +103,7 @@ export function Footer() {
         <p>Kopi haneut. Beuteung wareg. Hate bungah.</p>
         <p className="footer-branches-note">Hadir di 5 Cabang: Setiabudi, Jelambar 02, Jl. Swadaya Raya, Jagakarsa, & Jl. Hadiah Jelambar.</p>
       </div>
-      <span>&copy; {new Date().getFullYear()} Warkop Pasundan</span>
+      <span suppressHydrationWarning>&copy; {new Date().getFullYear()} Warkop Pasundan</span>
     </footer>
   );
 }

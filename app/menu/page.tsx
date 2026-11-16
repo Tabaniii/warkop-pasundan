@@ -62,6 +62,7 @@ export default function MenuPage() {
 
   return (
     <>
+      <a href="#main" className="skip">Langsung ke konten</a>
       <HeaderNav />
 
       <main id="main">
